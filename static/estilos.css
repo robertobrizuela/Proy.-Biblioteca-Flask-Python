@@ -1,0 +1,16 @@
+h1{
+    color: red;
+}
+
+.parrafo{
+    text-align: justify;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table, tr, td{
+    border: 2px solid red;
+    padding: 5px;
+}

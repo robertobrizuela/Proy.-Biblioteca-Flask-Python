@@ -1,0 +1,16 @@
+{% extends "base-template.html" %}
+
+{% block content %}
+  <h1>Lista de Libros</h1>
+  <ul>
+    {% for libro in libros %}
+      <li>
+        <strong>Título:</strong> {{ libro['titulo'] }} <br>
+        <strong>Autor:</strong> {{ libro['autor'] }} <br>
+        <strong>Editorial:</strong> {{ libro['editorial'] }} <br>
+        <strong>Número de Páginas:</strong> {{ libro['numero_paginas'] }} <br>
+        <strong>Edición:</strong> {{ libro['edicion'] }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

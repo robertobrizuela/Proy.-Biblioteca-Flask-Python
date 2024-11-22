@@ -1,0 +1,35 @@
+{% extends "base-template.html" %}
+
+{% block content %}
+  <h2>Resultados de la Búsqueda</h2>
+  <p>Mostrando resultados para: "{{ termino }}"</p>
+
+  {% if resultados %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>Editorial</th>
+          <th>Edición</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for libro in resultados %}
+        <tr>
+          <td>{{ libro.id }}</td>
+          <td>{{ libro.titulo }}</td>
+          <td>{{ libro.autor }}</td>
+          <td>{{ libro.editorial }}</td>
+          <td>{{ libro.edicion }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No se encontraron libros con el título "{{ termino }}".</p>
+  {% endif %}
+
+  <a href="{{ url_for('inicio') }}" class="btn btn-primary mt-3">Volver a la página principal</a>
+{% endblock %}

@@ -1,0 +1,22 @@
+# Entorno virtual
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+
+# Node
+node_modules/
+package-lock.json
+package.json
+
+# Otros
+.env
+.vscode/

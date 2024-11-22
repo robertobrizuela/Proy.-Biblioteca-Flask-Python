@@ -1,0 +1,36 @@
+{% extends "base-template.html" %}
+
+{% block content %}
+    <h1>Alta de libro</h1>
+
+    <!-- Mostrar mensaje flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="alert alert-{{ messages[0][0] }} alert-dismissible fade show" role="alert">
+                {{ messages[0][1] }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form action="/add_libro" method="POST">
+        <label class="form-label" name="titulo">Título del Libro</label>
+        <input class="form-control" type="text" name="titulo" id="titulo" required>
+
+        <label class="form-label" name="editorial">Editorial</label>
+        <input class="form-control" type="text" name="editorial" id="editorial" required>
+        
+        <label class="form-label" name="autor">Autor</label>
+        <input class="form-control" type="text" name="autor" id="autor" required>
+
+        <label class="form-label" name="numero_paginas">Número de Páginas</label>
+        <input class="form-control" type="number" name="numero_paginas" id="numero_paginas" required>
+
+        <label class="form-label" name="edicion">Edición</label>
+        <input class="form-control" type="text" name="edicion" id="edicion" required>
+
+        <br>
+        <button class="btn btn-primary mb-3" type="submit">Enviar</button>
+    </form>
+
+{% endblock %}

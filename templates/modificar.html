@@ -1,0 +1,29 @@
+{% extends "base-template.html" %}
+
+{% block content %}
+    <h1>Modificar Libro</h1>
+
+    <form method="POST">
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" value="{{ libro.titulo }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="autor" class="form-label">Autor</label>
+            <input type="text" class="form-control" id="autor" name="autor" value="{{ libro.autor }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="editorial" class="form-label">Editorial</label>
+            <input type="text" class="form-control" id="editorial" name="editorial" value="{{ libro.editorial }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="numero_paginas" class="form-label">Número de Páginas</label>
+            <input type="number" class="form-control" id="numero_paginas" name="numero_paginas" value="{{ libro.numero_paginas }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="edicion" class="form-label">Edición</label>
+            <input type="text" class="form-control" id="edicion" name="edicion" value="{{ libro.edicion }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    </form>
+{% endblock %}

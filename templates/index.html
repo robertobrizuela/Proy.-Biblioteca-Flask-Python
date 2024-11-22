@@ -1,0 +1,20 @@
+{% extends "base-template.html" %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="p-5 bg-light rounded shadow-lg text-center" style="max-width: 800px; background-color: #f8f9fa; border-radius: 15px;">
+            <h1 class="display-4 text-primary font-weight-bold mb-4">BiblioTECa</h1>
+            <p class="lead mt-3 text-muted" style="font-size: 1.2rem; line-height: 1.6;">
+                Bienvenidos a tu biblioteca virtual, un espacio dedicado a fomentar el amor por la lectura y el conocimiento. 
+                Aquí podrás explorar, descubrir y gestionar una colección de libros organizada especialmente para ti. 
+                Nuestra misión es acercarte a una amplia gama de géneros y autores, desde clásicos literarios hasta las últimas publicaciones 
+                en diversos campos de estudio. ¡Explora la Base de Datos!
+            </p>
+        </div>
+    </div>
+
+    <!-- Sección de llamada a la acción con fondo atractivo -->
+    <div class="text-center mt-5">
+        <a href="{{ url_for('almacenamiento') }}" class="btn btn-primary btn-lg">Explora los Libros Almacenados</a>
+    </div>
+{% endblock %}
